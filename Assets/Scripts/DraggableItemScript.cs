@@ -5,22 +5,13 @@ using UnityEngine.EventSystems;
 public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     private Vector3 startTransform;
-    private bool dragging;
     void Awake()
     {
         startTransform = transform.position;
-        dragging = false;
-    }
-    private void Update()
-    {
-        if (dragging == false) 
-        {
-            transform.position = startTransform;
-        }
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        dragging = true;
+        transform.position = Input.mousePosition;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -31,6 +22,5 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     public void OnEndDrag(PointerEventData eventData)
     {
         transform.position = startTransform;
-        dragging=false;
     }
 }
