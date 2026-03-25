@@ -10,6 +10,7 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private float SpawnRate = 10;
     private float timer = 0;
     public bool repairCustomerIsSpawned;
+    [SerializeField] private incomeManager incomeManager;
 
     private void Update()
     {
@@ -24,10 +25,10 @@ public class CustomerSpawner : MonoBehaviour
     private void Spawn()
     {
         timer = SpawnRate;
-        if (!repairCustomerIsSpawned)
+        if (incomeManager.finished)
         {
             Instantiate(Customer[Customer.Length - 1], gameObject.transform.position, transform.rotation);
-            repairCustomerIsSpawned = true;
+            incomeManager.finished = false;
         }
         else
         {

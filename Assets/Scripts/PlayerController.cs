@@ -15,28 +15,31 @@ public class PlayerController : MonoBehaviour
     private Vector3 originalPosition;
     private Quaternion originalRotation;
     [SerializeField] private float returnSpeed = 15f;
-
+    [SerializeField] private Transform originalPos;
 
     private void Awake()
     {
-        originalPosition = GameObject.FindGameObjectWithTag("Garment").transform.position;
-        originalRotation = GameObject.FindGameObjectWithTag("Garment").transform.rotation;
+        originalPosition = originalPos.position;
+        originalRotation = originalPos.rotation;
     }
 
     private void Update()
     {
-        if (isFixing && Input.GetMouseButton(0) && !dragging)
+        if (!dragging)
         {
-            RayToGarment();
-        }
-
-        if (objectHit != null && !Input.GetMouseButton(0))
-        {
-                ReturnObject();
+            if (isFixing && Input.GetMouseButton(0))
+            { 
+                RayToGarment();
+            }
+            if (objectHit != null && !Input.GetMouseButton(0)) 
+            { 
+                ReturnObject(); 
                 isHit = false;
+            }
         }
+        
 
-        if (isHit == true)
+        if (isHit == true && !dragging)
         {
             objectHit.transform.Rotate(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }

@@ -183,7 +183,7 @@ MonoBehaviour:
   repairDest: {fileID: 0}
   repairClothes:
   - {fileID: 0}
-  pickedClothing: {fileID: 0}
+  pickedClothing: {fileID: 7113645883123401142, guid: f1cfaac56b6b1f2429a1e76bd92642b6, type: 3}
 --- !u!1 &1579632866738228040
 GameObject:
   m_ObjectHideFlags: 0

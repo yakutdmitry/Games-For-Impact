@@ -12,6 +12,7 @@ public class incomeManager : MonoBehaviour
     public TextMeshProUGUI BalanceText;
     public int balance;
     private float timer = 7f;
+    public bool finished = false;
 
     private void Update()
     {
@@ -26,8 +27,14 @@ public class incomeManager : MonoBehaviour
             balance += _coffeeIncome;
             timer = 7f;
         }
+        
     }
-
+    public void fininshed()
+    {
+        Destroy(GameObject.FindWithTag("Garment"));
+        Destroy(GameObject.FindWithTag("RepairCustomer"));
+        finished = true;
+    }
     // private IEnumerator CoffeIncome()
     // {
     //     timer = 7;

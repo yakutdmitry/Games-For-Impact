@@ -27,6 +27,12 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         transform.position = Input.mousePosition;
         controller.dragging = true;
+        RaycastHit hit;
+        Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole")
+        {
+            Destroy(hit.transform.gameObject);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
