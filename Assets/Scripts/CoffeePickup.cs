@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class CoffeePickup : MonoBehaviour
 {
     public GameObject nextTarget;
+    [SerializeField] private ParticleSystem particle;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Customer"))
@@ -26,6 +27,8 @@ public class CoffeePickup : MonoBehaviour
             other.GetComponent<NavMeshAgent>().isStopped = false;
             other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
             Debug.Log(nextTarget.transform.position);
+            particle.Play();
+            
         }
         
     }
