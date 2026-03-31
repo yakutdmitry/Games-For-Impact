@@ -19,11 +19,10 @@ public class CoffeePickup : MonoBehaviour
 
     public IEnumerator nextLocation(GameObject other)
     {
-        
-        
         yield return new WaitForSeconds(5);
         other.GetComponent<NavMeshAgent>().SetDestination(nextTarget.transform.position);
         other.GetComponent<NavMeshAgent>().isStopped = false;
+        other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
         Debug.Log(nextTarget.transform.position);
     }
 }
