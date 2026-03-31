@@ -2,6 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.LowLevelPhysics2D;
 
 public class CoffeeCustomer : MonoBehaviour
 {
@@ -10,14 +11,14 @@ public class CoffeeCustomer : MonoBehaviour
     public bool collected = false;
     public Animator[] animator;
     public GameObject cup;
-    private Transform coffeRoot;
+    [SerializeField] private GameObject coffeRoot;
+    [SerializeField] private Transform body;
     private void Start()
     {
         Till = GameObject.Find("CoffeeCustomerDestination");
         animator = GetComponentsInChildren<Animator>();
         navMesh = gameObject.GetComponent<NavMeshAgent>();
         navMesh.SetDestination(Till.transform.position);
-        coffeRoot = transform.Find("DEF-hand.R");
     }
 
     private void Update()
@@ -33,6 +34,10 @@ public class CoffeeCustomer : MonoBehaviour
 
     public void CoffeeSpawn()
     {
-        Instantiate(cup, coffeRoot.position, coffeRoot.rotation);
+        Debug.Log(coffeRoot);
+        Debug.Log(cup);
+        var obj = Instantiate(cup, coffeRoot.transform.position, coffeRoot.transform.rotation);
+        obj.transform.SetParent(coffeRoot.transform, true);
     }
+
 }

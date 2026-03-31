@@ -133,6 +133,8 @@ MonoBehaviour:
   collected: 0
   animator: []
   cup: {fileID: 919132149155446097, guid: 58bddeeb526d10a4e96130199507b779, type: 3}
+  coffeRoot: {fileID: 1218845977766157486}
+  body: {fileID: 4479520255322031484}
 --- !u!136 &2350456255202803933
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -357,5 +359,15 @@ PrefabInstance:
 --- !u!4 &514393757018668139 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3951123954247321067, guid: d2a9e6412fa0b8247b6469c6b42c500f, type: 3}
+  m_PrefabInstance: {fileID: 3600144292618992000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218845977766157486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2385920292370130222, guid: d2a9e6412fa0b8247b6469c6b42c500f, type: 3}
+  m_PrefabInstance: {fileID: 3600144292618992000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4479520255322031484 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1142854207214681340, guid: d2a9e6412fa0b8247b6469c6b42c500f, type: 3}
   m_PrefabInstance: {fileID: 3600144292618992000}
   m_PrefabAsset: {fileID: 0}

@@ -165,9 +165,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8232ddf0a6f0e4f4fbadff57d2073ebd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Till: {fileID: 0}
   collected: 0
   animator: []
+  cup: {fileID: 919132149155446097, guid: 7b7348ad428e217409e7e0e35a6a1a37, type: 3}
+  coffeRoot: {fileID: 9008848165401036976}
+  body: {fileID: 8417865076346720574}
 --- !u!136 &1827939500141169588
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -402,6 +404,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5687730694797075528}
     m_Modifications:
+    - target: {fileID: 4919453444092824451, guid: 0b08db8017086ee47b81cc0ab6d1f384, type: 3}
+      propertyPath: m_Name
+      value: hand
+      objectReference: {fileID: 0}
     - target: {fileID: 7047850286156646635, guid: 0b08db8017086ee47b81cc0ab6d1f384, type: 3}
       propertyPath: m_Name
       value: GAPNPCBody (1)
@@ -524,6 +530,11 @@ PrefabInstance:
 --- !u!4 &6036404225341247842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7552857829681934160, guid: d76892891443fad44b74bee14cc33a55, type: 3}
+  m_PrefabInstance: {fileID: 4257231527799815730}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9008848165401036976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5048924581787694722, guid: d76892891443fad44b74bee14cc33a55, type: 3}
   m_PrefabInstance: {fileID: 4257231527799815730}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5452864011778200493
