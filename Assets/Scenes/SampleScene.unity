@@ -4316,6 +4316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RepairCustomerDest
   popUP: {fileID: 2044376878}
+  workshopCamera: {fileID: 336993767}
   GarmentSpawner: {fileID: 678908107}
 --- !u!4 &737908814
 Transform:
