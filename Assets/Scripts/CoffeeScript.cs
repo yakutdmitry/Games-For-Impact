@@ -8,21 +8,21 @@ public class CoffeeScript : MonoBehaviour
     private void Start()
     {
         colr = gameObject.GetComponent<Collider>();
-        Debug.Log(colr);
+        // Debug.Log(colr);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collision");
+        // Debug.Log("Collision");
         if (other.CompareTag("Customer"))
         {
             
-            Debug.Log("Customer detected");
+            // Debug.Log("Customer detected");
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("STAY");
+        // Debug.Log("STAY");
     }
 }

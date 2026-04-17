@@ -13,9 +13,9 @@ public class CoffeeSpawner : MonoBehaviour
             if (other.CompareTag("Customer"))
             {
                 other.GetComponent<NavMeshAgent>().isStopped = true;
-                Debug.Log("Triggered");
+                // Debug.Log("Triggered");
                 StartCoroutine(nextLocation(other.gameObject));
-                Debug.Log("Executed");
+                // Debug.Log("Executed");
                 RandomLocation();
             }
         }
@@ -23,11 +23,11 @@ public class CoffeeSpawner : MonoBehaviour
         public IEnumerator nextLocation(GameObject other)
         {
             other.gameObject.GetComponent<CoffeeCustomer>().collected = true;
-            Debug.Log(other.gameObject.GetComponent<CoffeeCustomer>().collected);
+            // Debug.Log(other.gameObject.GetComponent<CoffeeCustomer>().collected);
             yield return new WaitForSeconds(2);
             other.GetComponent<NavMeshAgent>().SetDestination(nextTarget.position);
             other.GetComponent<NavMeshAgent>().isStopped = false;
-            Debug.Log(nextTarget.position);
+            // Debug.Log(nextTarget.position);
         }
 
         public void RandomLocation()
@@ -41,6 +41,6 @@ public class CoffeeSpawner : MonoBehaviour
             // {
             //     
             // }
-            Debug.Log(nextTarget.gameObject);
+            // Debug.Log(nextTarget.gameObject);
         }
 }

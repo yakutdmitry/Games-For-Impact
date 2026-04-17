@@ -8,7 +8,7 @@ public class CustomerDestroy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Customer") && other.GetComponent<CoffeeCustomer>().collected)
         {
-            Debug.Log("Collected coffee customer detected");
+            // Debug.Log("Collected coffee customer detected");
             Destroy(other.gameObject);
         }
     }

@@ -45,7 +45,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Hole" && gameObject.tag == "Patch")
         {
-            Debug.Log(hit.transform.name);
+            // Debug.Log(hit.transform.name);
             List<Transform> anchors = new List<Transform>();
             foreach (Transform child in hit.transform)
             {
@@ -69,7 +69,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                 {
                     if (holes[i] == hit.transform.gameObject)
                     {
-                        Debug.Log("Detected");
+                        // Debug.Log("Detected");
                         Destroy(hit.transform.gameObject);
                         holes.RemoveAt(i);
                     }

@@ -89,14 +89,14 @@ public class InventoryManager : MonoBehaviour
         itemList = new ItemProfile();
         Debug.Log(filePath);
         loadInventory();
-        item1ShopText.text = $"€{itemList.item1Price}";
-        item2ShopText.text = $"€{itemList.item2Price}";
-        item3ShopText.text = $"€{itemList.item3Price}";
-        item4ShopText.text = $"€{itemList.item4Price}";
-        item5ShopText.text = $"€{itemList.item5Price}";
-        item6ShopText.text = $"€{itemList.item6Price}";
-        item7ShopText.text = $"€{itemList.item7Price}";
-        item8ShopText.text = $"€{itemList.item8Price}";
+        item1ShopText.text = $"ï¿½{itemList.item1Price}";
+        item2ShopText.text = $"ï¿½{itemList.item2Price}";
+        item3ShopText.text = $"ï¿½{itemList.item3Price}";
+        item4ShopText.text = $"ï¿½{itemList.item4Price}";
+        item5ShopText.text = $"ï¿½{itemList.item5Price}";
+        item6ShopText.text = $"ï¿½{itemList.item6Price}";
+        item7ShopText.text = $"ï¿½{itemList.item7Price}";
+        item8ShopText.text = $"ï¿½{itemList.item8Price}";
     }
     private void Update()
     {
@@ -151,7 +151,7 @@ public class InventoryManager : MonoBehaviour
             itemList.item8Name = item8StartName;
             itemList.item8Quantity = item8StartQuantity;
             itemList.item8Price = item8StartPrice;
-            Debug.Log("No File Found");
+            // Debug.Log("No File Found");
         }
     }
     public void saveInventory()
