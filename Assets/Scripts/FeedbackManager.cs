@@ -11,26 +11,33 @@ public class FeedbackManager : MonoBehaviour
     [SerializeField] private string[] NotFinished;
     public TextMeshProUGUI DisplayedText;
     [SerializeField] private GameObject InventoryManager;
+    [SerializeField] private incomeManager incomeManager;
 
     public void GenerateFeedback()
     {
-        DisplayedText.text = SucessSpeeches[Random.Range(0, SucessSpeeches.Length)];
-        InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
-        // if(isFixed && !needsFeedback)
-        // {
-        //     DisplayedText.text = SucessSpeeches[Random.Range(0, SucessSpeeches.Length)];
-        //     InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
-        // }
-        //
-        // if (isFixed && needsFeedback)
-        // {
-        //     DisplayedText.text = TeachFeedback[Random.Range(0, TeachFeedback.Length)];
-        //     InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
-        // }
-        //
-        // if (!isFixed)
-        // {
-        //     DisplayedText.text = NotFinished[Random.Range(0, NotFinished.Length)];
-        // }
+        if(GameObject.FindWithTag("Garment") != null)
+        {
+            Destroy(GameObject.FindWithTag("Garment"));
+            Destroy(GameObject.FindWithTag("RepairCustomer"));
+            incomeManager.finished = true;
+        }
+        bool isFixed = true;
+        bool needsFeedback = false;
+        if(isFixed && !needsFeedback)
+        {
+            DisplayedText.text = SucessSpeeches[Random.Range(0, SucessSpeeches.Length)];
+            InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
+        }
+        
+        if (isFixed && needsFeedback)
+        {
+            DisplayedText.text = TeachFeedback[Random.Range(0, TeachFeedback.Length)];
+            InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
+        }
+        
+        if (!isFixed)
+        {
+            DisplayedText.text = NotFinished[Random.Range(0, NotFinished.Length)];
+        }
     }
 }

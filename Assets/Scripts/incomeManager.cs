@@ -29,7 +29,7 @@ public class incomeManager : MonoBehaviour
         }
         
     }
-    public void fininshed()
+    public void Fininshed()
     {
         Destroy(GameObject.FindWithTag("Garment"));
         Destroy(GameObject.FindWithTag("RepairCustomer"));

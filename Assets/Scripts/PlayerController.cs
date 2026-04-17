@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private bool isFixing;
     [SerializeField] private float height = 0.2f;
-    [SerializeField] private Transform objectHit;
+    public Transform objectHit;
     [SerializeField] private bool isHit;
     [SerializeField] private float rotationSpeed;
     public bool dragging = false;
@@ -27,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!dragging)
         {
-            if (isFixing && Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
             { 
                 RayToGarment();
             }
@@ -39,7 +38,7 @@ public class PlayerController : MonoBehaviour
         }
         
 
-        if (isHit == true && !dragging)
+        if (isHit == true && !dragging && objectHit != null);
         {
             objectHit.transform.Rotate(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         }
@@ -51,7 +50,7 @@ public class PlayerController : MonoBehaviour
         Ray r = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(r, out hit) && hit.transform.tag == "Garment" && isHit == false)
         {
-            Debug.Log(hit);
+            // Debug.Log(hit);
             objectHit = hit.transform;
             objectHit.transform.Translate(new Vector3(0, height, 0), Space.World);
             isHit = true;
@@ -63,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         objectHit.position = Vector3.Lerp(objectHit.position, originalPosition, Time.deltaTime * returnSpeed);
         objectHit.rotation = Quaternion.Lerp(objectHit.rotation, originalRotation, Time.deltaTime * returnSpeed);
+        isHit = false;
     }
 
 }

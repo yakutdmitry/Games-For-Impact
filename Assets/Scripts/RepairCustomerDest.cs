@@ -14,6 +14,7 @@ public class RepairCustomerDest : MonoBehaviour
             other.GetComponent<NavMeshAgent>().isStopped = true;
             popUP.SetActive(true);
             Instantiate(other.GetComponent<RepairCustomer>().pickedClothing, GarmentSpawner);
+            
         }
     }
 }

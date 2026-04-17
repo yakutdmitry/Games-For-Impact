@@ -34,8 +34,8 @@ public class CoffeeCustomer : MonoBehaviour
 
     public void CoffeeSpawn()
     {
-        Debug.Log(coffeRoot);
-        Debug.Log(cup);
+        // Debug.Log(coffeRoot);
+        // Debug.Log(cup);
         var obj = Instantiate(cup, coffeRoot.transform.position, coffeRoot.transform.rotation);
         obj.transform.SetParent(coffeRoot.transform, true);
     }
