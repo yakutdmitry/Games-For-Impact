@@ -2895,7 +2895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04ba6a216e5882d4aa752601f6346c90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  isFixing: 1
   height: 0.45
   objectHit: {fileID: 0}
   isHit: 0
@@ -5222,6 +5221,7 @@ MonoBehaviour:
   NotFinished: []
   DisplayedText: {fileID: 699281516}
   InventoryManager: {fileID: 1892397788}
+  incomeManager: {fileID: 242792710}
 --- !u!1 &876286740
 GameObject:
   m_ObjectHideFlags: 0

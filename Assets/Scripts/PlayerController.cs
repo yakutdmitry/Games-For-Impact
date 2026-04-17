@@ -38,9 +38,14 @@ public class PlayerController : MonoBehaviour
         }
         
 
-        if (isHit == true && !dragging && objectHit != null);
+        if (isHit == true && !dragging && objectHit != null)
         {
             objectHit.transform.Rotate(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        }
+
+        if (objectHit == null)
+        {
+            isHit = false;
         }
     }
 
@@ -62,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         objectHit.position = Vector3.Lerp(objectHit.position, originalPosition, Time.deltaTime * returnSpeed);
         objectHit.rotation = Quaternion.Lerp(objectHit.rotation, originalRotation, Time.deltaTime * returnSpeed);
-        isHit = false;
+        // isHit = false;
     }
 
 }
