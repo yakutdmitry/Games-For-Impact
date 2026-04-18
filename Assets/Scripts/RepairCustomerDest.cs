@@ -22,9 +22,9 @@ public class RepairCustomerDest : MonoBehaviour
 
     private void Update()
     {
-        if (workshopCamera.activeSelf)
-        {
-            popUP.SetActive(false);
-        }
+        //if (workshopCamera.activeSelf)
+        //{
+        //    popUP.SetActive(false);
+        //}
     }
 }

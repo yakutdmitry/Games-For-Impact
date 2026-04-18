@@ -89,14 +89,14 @@ public class InventoryManager : MonoBehaviour
         itemList = new ItemProfile();
         Debug.Log(filePath);
         loadInventory();
-        item1ShopText.text = $"�{itemList.item1Price}";
-        item2ShopText.text = $"�{itemList.item2Price}";
-        item3ShopText.text = $"�{itemList.item3Price}";
-        item4ShopText.text = $"�{itemList.item4Price}";
-        item5ShopText.text = $"�{itemList.item5Price}";
-        item6ShopText.text = $"�{itemList.item6Price}";
-        item7ShopText.text = $"�{itemList.item7Price}";
-        item8ShopText.text = $"�{itemList.item8Price}";
+        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity}";
+        item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
+        item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
+        item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
+        item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
+        item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
+        item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
+        item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
     }
     private void Update()
     {
@@ -110,6 +110,15 @@ public class InventoryManager : MonoBehaviour
         item6OwnedText.text = $"{itemList.item6Name}: ({itemList.item6Quantity})";
         item7OwnedText.text = $"{itemList.item7Name}: ({itemList.item7Quantity})";
         item8OwnedText.text = $"{itemList.item8Name}: ({itemList.item8Quantity})";
+
+        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity}";
+        item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
+        item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
+        item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
+        item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
+        item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
+        item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
+        item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
     }
     public void loadInventory()
     {
