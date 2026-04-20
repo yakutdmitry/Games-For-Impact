@@ -83,6 +83,8 @@ public class InventoryManager : MonoBehaviour
     const string INVENTORY_FILE = "Inventory.json";
     string filePath;
     public ItemProfile itemList;
+
+    public GameObject customerSpawner;
     void Start()
     {
         filePath = Application.persistentDataPath;
@@ -114,11 +116,22 @@ public class InventoryManager : MonoBehaviour
         item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity}";
         item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
         item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
-        item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
-        item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
-        item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
-        item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
-        item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
+        if (customerSpawner.GetComponent<CustomerSpawner>().redText == false)
+        {
+            item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
+            item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
+            item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
+            item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
+            item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
+        }
+        else
+        {
+            item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n <color=red>Owned: {itemList.item4Quantity}</color>";
+            item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n <color=red>Owned: {itemList.item5Quantity}</color>";
+            item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n <color=red>Owned: {itemList.item6Quantity}</color>";
+            item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n <color=red>Owned: {itemList.item7Quantity}</color>";
+            item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n <color=red>Owned: {itemList.item8Quantity}</color>";
+        }
     }
     public void loadInventory()
     {
