@@ -7615,6 +7615,7 @@ MonoBehaviour:
   InventoryManager: {fileID: 1892397788}
   notEnoughMaterials: {fileID: 1157121958}
   redDot: {fileID: 1909151240}
+  redText: 0
 --- !u!1 &1190641578
 GameObject:
   m_ObjectHideFlags: 0
@@ -11772,6 +11773,7 @@ MonoBehaviour:
     item8Name: 
     item8Quantity: 0
     item8Price: 0
+  customerSpawner: {fileID: 1187773316}
 --- !u!1 &1896858212
 GameObject:
   m_ObjectHideFlags: 0

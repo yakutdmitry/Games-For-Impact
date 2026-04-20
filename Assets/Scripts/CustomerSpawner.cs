@@ -1,4 +1,5 @@
 using System;
+using System.Drawing;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject notEnoughMaterials;
     public GameObject redDot;
     private bool onCafe = true;
+    public bool redText = false;
 
     private void Start()
     {
@@ -46,6 +48,7 @@ public class CustomerSpawner : MonoBehaviour
                 Instantiate(CoffeeCustomers[Random.Range(0, CoffeeCustomers.Length - 1)], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
                 notEnoughMaterials.SetActive(false);
                 redDot.SetActive(false);
+                redText = false;
             }
             else
             {
@@ -54,6 +57,7 @@ public class CustomerSpawner : MonoBehaviour
                     notEnoughMaterials.SetActive(true);
                     redDot.SetActive(true);
                 }
+                redText = true;
             }
         }
         
