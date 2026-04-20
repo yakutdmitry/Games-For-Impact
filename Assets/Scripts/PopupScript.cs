@@ -12,6 +12,6 @@ public class PopupScript : MonoBehaviour
     public void PopUp()
     {
             popup1.SetActive(true);
-            PopUpText.text = Data.customerText[Random.Range(0, Data.customerText.Length)];
+            PopUpText.text = Data.customerText[Random.Range(0, Data.customerText.Length - 1)];
     }
 }

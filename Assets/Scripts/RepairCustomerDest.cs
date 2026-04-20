@@ -9,16 +9,15 @@ public class RepairCustomerDest : MonoBehaviour
     [SerializeField] private PopupScript popUP;
     [SerializeField] private GameObject workshopCamera;
     public Transform GarmentSpawner;
-	public GarmentList GarmentList;
+	public GameData Data;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("RepairCustomer"))
         {
-            Debug.Log("Repair Customer Arrived");
-            GarmentList = GameObject.Find("GarmentSpawner").GetComponent<GarmentList>();
-            other.GetComponent<NavMeshAgent>().isStopped = true;
+            Debug.Log($"Repair Customer Arrived   Customer: {other.gameObject.name}");
+            other.gameObject.GetComponent<NavMeshAgent>().isStopped = true;
             popUP.PopUp();
-            Instantiate(GarmentList.garments[Random.Range(0, GarmentList.garments.Length - 1)], GarmentSpawner.position,
+            Instantiate(Data.garments[Random.Range(0, Data.garments.Length - 1)], GarmentSpawner.position,
                 GarmentSpawner.rotation);
 
         }
