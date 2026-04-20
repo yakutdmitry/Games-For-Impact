@@ -10,12 +10,15 @@ public class CustomerSpawner : MonoBehaviour
     private float timer = 0;
     public bool repairCustomerIsSpawned;
     [SerializeField] private incomeManager incomeManager;
+
     public GameObject InventoryManager;
     public GameObject notEnoughMaterials;
+    public GameObject redDot;
 
     private void Start()
     {
         notEnoughMaterials.SetActive(false);
+        redDot.SetActive(false);
     }
     private void Update()
     {
@@ -41,10 +44,12 @@ public class CustomerSpawner : MonoBehaviour
             {
                 Instantiate(CoffeeCustomers[Random.Range(0, CoffeeCustomers.Length - 1)], gameObject.transform.position, transform.rotation); // convert to range to spawn random customers appereances.
                 notEnoughMaterials.SetActive(false);
+                redDot.SetActive(false);
             }
             else
             {
                 notEnoughMaterials.SetActive(true);
+                redDot.SetActive(true);
             }
         }
         
