@@ -126,10 +126,10 @@ TextureImporter:
       name: IMG_7475_0
       rect:
         serializedVersion: 2
-        x: 124
-        y: 559
-        width: 249
-        height: 238
+        x: 23
+        y: 562
+        width: 253
+        height: 211
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,10 +148,10 @@ TextureImporter:
       name: IMG_7475_1
       rect:
         serializedVersion: 2
-        x: 418
-        y: 485
-        width: 294
-        height: 319
+        x: 293
+        y: 474
+        width: 295
+        height: 324
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +170,10 @@ TextureImporter:
       name: IMG_7475_2
       rect:
         serializedVersion: 2
-        x: 845
-        y: 496
-        width: 193
-        height: 254
+        x: 643
+        y: 524
+        width: 343
+        height: 238
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: IMG_7475_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1792
-        height: 317
+        x: 1042
+        y: 546
+        width: 344
+        height: 240
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,10 +214,10 @@ TextureImporter:
       name: IMG_7475_4
       rect:
         serializedVersion: 2
-        x: 30
-        y: 226
-        width: 348
-        height: 238
+        x: 1464
+        y: 426
+        width: 306
+        height: 358
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: IMG_7475_5
       rect:
         serializedVersion: 2
-        x: 418
-        y: 211
-        width: 344
-        height: 239
+        x: 1752
+        y: 732
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,6 +250,28 @@ TextureImporter:
       bones: []
       spriteID: b5a2907fac191b343a6f7d247212ebd2
       internalID: -25271187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_7475_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1792
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce95f631c2966234097ff512b724cb3b
+      internalID: 1385929851
       vertices: []
       indices: 
       edges: []
@@ -276,6 +298,7 @@ TextureImporter:
       IMG_7475_3: -998243821
       IMG_7475_4: 109245805
       IMG_7475_5: -25271187
+      IMG_7475_6: 1385929851
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
