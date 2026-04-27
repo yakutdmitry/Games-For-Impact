@@ -10958,6 +10958,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
+  Inventory: {fileID: 0}
   garment: {fileID: 0}
 --- !u!222 &1195214356
 CanvasRenderer:
@@ -12068,6 +12069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   Corner: {fileID: 6263218704343119722, guid: c1e5d4b58b06dff4fbcf26adaad14dd5, type: 3}
+  Inventory: {fileID: 0}
   garment: {fileID: 0}
 --- !u!222 &1286288066
 CanvasRenderer:
@@ -17888,29 +17890,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   startingBalance: 20
   item1StartName: Threads
-  item1StartQuantity: 0
-  item1StartPrice: 1
+  item1StartQuantity: 15
+  item1StartPrice: 5
   item2StartName: Needles
-  item2StartQuantity: 0
-  item2StartPrice: 3
+  item2StartQuantity: 20
+  item2StartPrice: 15
   item3StartName: Patches
-  item3StartQuantity: 0
-  item3StartPrice: 2
+  item3StartQuantity: 10
+  item3StartPrice: 10
   item4StartName: Coffee Beans
-  item4StartQuantity: 0
-  item4StartPrice: 2
+  item4StartQuantity: 5
+  item4StartPrice: 10
   item5StartName: Lids
-  item5StartQuantity: 0
-  item5StartPrice: 1
+  item5StartQuantity: 5
+  item5StartPrice: 5
   item6StartName: Biodegradeable Cups
-  item6StartQuantity: 0
-  item6StartPrice: 2
+  item6StartQuantity: 5
+  item6StartPrice: 10
   item7StartName: Sugar
-  item7StartQuantity: 0
-  item7StartPrice: 1
+  item7StartQuantity: 5
+  item7StartPrice: 5
   item8StartName: Stirring Rods
-  item8StartQuantity: 0
-  item8StartPrice: 1
+  item8StartQuantity: 5
+  item8StartPrice: 5
   item1ShopText: {fileID: 570754918}
   item2ShopText: {fileID: 135749563}
   item3ShopText: {fileID: 1279544950}
