@@ -17910,7 +17910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   startingBalance: 20
   item1StartName: Threads
-  item1StartQuantity: 15
+  item1StartQuantity: 30
   item1StartPrice: 5
   item2StartName: Needles
   item2StartQuantity: 20

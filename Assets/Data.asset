@@ -31,9 +31,7 @@ MonoBehaviour:
     shop and thought it would look good if I could get it into tip-top shape\u2026
     but, uhm, let\u2019s just say I, uhh, forgot that I\u2019m not that handy with
     needle thread, y\u2019know? Anyways thankyousomuchand byeee!"
-  feedback:
-  - 'Feedback
-
-'
-  - Feedback 1
-  - Feedback 2
+  Sucessfulfeedback:
+  - Fixed
+  UnSucessfulfeedback:
+  - Holes Left

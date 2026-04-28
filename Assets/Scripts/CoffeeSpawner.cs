@@ -36,12 +36,6 @@ public class CoffeeSpawner : MonoBehaviour
             // nextTarget = chairs[Random.Range(0, chairs.Length)];
             // if (Random.Range(1, 2) == 1)
             // {
-            nextTarget = exit;
-            // }
-            // else
-            // {
-            //     
-            // }
-            // Debug.Log(nextTarget.gameObject);
+            nextTarget = exit; 
         }
 }
