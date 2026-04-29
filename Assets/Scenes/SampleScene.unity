@@ -6255,7 +6255,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.73
+  m_Radius: 0.39
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &783858595
 MonoBehaviour:
@@ -6278,7 +6278,7 @@ Transform:
   m_GameObject: {fileID: 783858593}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0.000001952052}
-  m_LocalPosition: {x: 0.325, y: 0.27, z: 3.541}
+  m_LocalPosition: {x: 0.014, y: 0.27, z: 3.835}
   m_LocalScale: {x: 0.91973346, y: 1.3205533, z: 1.1877438}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10757,7 +10757,7 @@ MonoBehaviour:
   - {fileID: 6562208596152868779, guid: 73bbae464c3a6c149a9d396516eff712, type: 3}
   - {fileID: 1689769263049516096, guid: 7aa2b812eefc5f54896a39c95fa444ca, type: 3}
   - {fileID: 232064316772849679, guid: 71e141400b7833d499d9e2f5aec85162, type: 3}
-  SpawnRate: 4.5
+  SpawnRate: 2.5
   repairCustomerIsSpawned: 0
   incomeManager: {fileID: 242792710}
   InventoryManager: {fileID: 1892397788}
