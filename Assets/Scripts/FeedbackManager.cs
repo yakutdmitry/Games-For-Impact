@@ -18,6 +18,7 @@ public class FeedbackManager : MonoBehaviour
         if(GameObject.FindWithTag("Garment") != null)
         { 
             needsRepair = GameObject.FindWithTag("Hole") != null || GameObject.FindWithTag("Corner") != null;
+            Debug.Log("fEEDBACK FOUND " + GameObject.FindWithTag("Garment"));
             Debug.Log("needsRepair is " + needsRepair);
             Debug.Log("Found hole " + GameObject.FindWithTag("Hole"));
             Destroy(GameObject.FindWithTag("Garment"));
