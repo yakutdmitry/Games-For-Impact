@@ -12,6 +12,7 @@ public class CoffeePickup : MonoBehaviour
     public int CustomerIncome;
     public GameObject InventoryScript;
     public GameObject nextTarget;
+    public AudioSource cashSound;
     [SerializeField] private ParticleSystem particle;
 
     private void OnTriggerEnter(Collider other)
@@ -38,6 +39,7 @@ public class CoffeePickup : MonoBehaviour
             other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
             Debug.Log(nextTarget.transform.position);
             particle.Play();
+            cashSound.Play();
             coffeeIncome();
         }
         
