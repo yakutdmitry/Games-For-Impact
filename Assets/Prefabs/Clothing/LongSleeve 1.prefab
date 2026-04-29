@@ -63,10 +63,10 @@ PrefabInstance:
     - target: {fileID: 882129737928793925, guid: b072d9eccd99e9941a39ebb55cf5cd17, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a67a1f481453a3e43993f5d05e333818, type: 2}
+      objectReference: {fileID: 2100000, guid: 62a351b69cc399d49ba71705aaa1bc1e, type: 2}
     - target: {fileID: 919132149155446097, guid: b072d9eccd99e9941a39ebb55cf5cd17, type: 3}
       propertyPath: m_Name
-      value: LongSleeve
+      value: LongSleeve 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b072d9eccd99e9941a39ebb55cf5cd17, type: 3}
       propertyPath: m_TagString
