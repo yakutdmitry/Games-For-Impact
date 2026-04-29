@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class CoffeeSpawner : MonoBehaviour
 {
+    public float customerWaitTime = 1f;
         public Transform[] chairs;
         public GameObject[] Instances;
         public Transform exit;
@@ -24,10 +25,10 @@ public class CoffeeSpawner : MonoBehaviour
         {
             other.gameObject.GetComponent<CoffeeCustomer>().collected = true;
             // Debug.Log(other.gameObject.GetComponent<CoffeeCustomer>().collected);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(customerWaitTime);
             other.GetComponent<NavMeshAgent>().SetDestination(nextTarget.position);
             other.GetComponent<NavMeshAgent>().isStopped = false;
-            // Debug.Log(nextTarget.position);
+            // Debug.Laog(nextTarget.position);
         }
 
         public void RandomLocation()
@@ -35,12 +36,6 @@ public class CoffeeSpawner : MonoBehaviour
             // nextTarget = chairs[Random.Range(0, chairs.Length)];
             // if (Random.Range(1, 2) == 1)
             // {
-            nextTarget = exit;
-            // }
-            // else
-            // {
-            //     
-            // }
-            // Debug.Log(nextTarget.gameObject);
+            nextTarget = exit; 
         }
 }

@@ -9,15 +9,16 @@ public class Garment : MonoBehaviour
     public GameObject[] Patches;
     [SerializeField] private GameObject[] holePrefab;
     [SerializeField] private Transform[] anchors;
-    void Start()
+    void Awake()
     {
         
-        anchors = GameObject.FindGameObjectsWithTag("Anchor").Select(a => a.transform).ToArray();
+        
         SpawnRandomHoles();
     }
 
     void SpawnRandomHoles()
     {
+        anchors = GameObject.FindGameObjectsWithTag("Anchor").Select(a => a.transform).ToArray();
         int holesToSpawn = Random.Range(2, 6);
         
         int[] randomIndexes = Enumerable.Range(0, anchors.Length)

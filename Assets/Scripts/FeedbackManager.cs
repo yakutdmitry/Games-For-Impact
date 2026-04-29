@@ -11,37 +11,39 @@ public class FeedbackManager : MonoBehaviour
     [SerializeField] private GameObject InventoryManager;
     [SerializeField] private incomeManager incomeManager;
 
+    private bool needsRepair;
+    
     public void GenerateFeedback()
     {
         if(GameObject.FindWithTag("Garment") != null)
-        {
+        { 
+            needsRepair = GameObject.FindWithTag("Hole") != null || GameObject.FindWithTag("Corner") != null;
+            Debug.Log("fEEDBACK FOUND " + GameObject.FindWithTag("Garment"));
+            Debug.Log("needsRepair is " + needsRepair);
+            Debug.Log("Found hole " + GameObject.FindWithTag("Hole"));
             Destroy(GameObject.FindWithTag("Garment"));
             Destroy(GameObject.FindWithTag("RepairCustomer"));
             incomeManager.finished = true;
             Debug.Log(InventoryManager.GetComponent<InventoryManager>().itemList.balance);
-            InventoryManager.GetComponent<InventoryManager>().itemList.balance += Random.Range(10, 25); //temp
+            // InventoryManager.GetComponent<InventoryManager>().itemList.balance += Random.Range(10, 25); //temp
             Debug.Log("Balance added");
             Debug.Log(InventoryManager.GetComponent<InventoryManager>().itemList.balance);
-            DisplayedText.text = Data.feedback[Random.Range(0, Data.feedback.Length)];
-
-        }
-        bool isFixed = true;
-        bool needsFeedback = false;
-        if(isFixed && !needsFeedback)
-        {
-            // DisplayedText.text = SucessSpeeches[Random.Range(0, SucessSpeeches.Length)];
-            // InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
+            // DisplayedText.text = Data.feedback[Random.Range(0, Data.feedback.Length)];
+            
+            
         }
         
-        if (isFixed && needsFeedback)
+        
+        if (needsRepair)
         {
-            // DisplayedText.text = TeachFeedback[Random.Range(0, TeachFeedback.Length)];
-            // InventoryManager.GetComponent<InventoryManager>().itemList.balance += 15;
+            DisplayedText.text = Data.UnSucessfulfeedback[Random.Range(0, Data.Sucessfulfeedback.Length)];
+            InventoryManager.GetComponent<InventoryManager>().itemList.balance += Random.Range(20, 35);
         }
         
-        if (!isFixed)
+        if (!needsRepair)
         {
-            // DisplayedText.text = NotFinished[Random.Range(0, NotFinished.Length)];
+            DisplayedText.text = Data.Sucessfulfeedback[Random.Range(0, Data.UnSucessfulfeedback.Length)];
+            InventoryManager.GetComponent<InventoryManager>().itemList.balance += 10;
         }
     }
 }

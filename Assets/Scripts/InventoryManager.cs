@@ -91,7 +91,7 @@ public class InventoryManager : MonoBehaviour
         itemList = new ItemProfile();
         Debug.Log(filePath);
         loadInventory();
-        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity}";
+        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity / 1}";
         item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
         item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
         item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
     {
         BalanceText.text = $"Balance: {itemList.balance}";
 
-        item1OwnedText.text = $"{itemList.item1Name}: ({itemList.item1Quantity})";
+        item1OwnedText.text = $"{itemList.item1Name}: ({itemList.item1Quantity / 1})";
         item2OwnedText.text = $"{itemList.item2Name}: ({itemList.item2Quantity})";
         item3OwnedText.text = $"{itemList.item3Name}: ({itemList.item3Quantity})";
         item4OwnedText.text = $"{itemList.item4Name}: ({itemList.item4Quantity})";
@@ -113,7 +113,7 @@ public class InventoryManager : MonoBehaviour
         item7OwnedText.text = $"{itemList.item7Name}: ({itemList.item7Quantity})";
         item8OwnedText.text = $"{itemList.item8Name}: ({itemList.item8Quantity})";
 
-        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity}";
+        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity / 1}";
         item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
         item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
         if (customerSpawner.GetComponent<CustomerSpawner>().redText == false)
@@ -187,42 +187,42 @@ public class InventoryManager : MonoBehaviour
     {
         if (itemIndex == 1 && itemList.balance >= itemList.item1Price)
         {
-            itemList.item1Quantity++;
+            itemList.item1Quantity += 20;
             itemList.balance = itemList.balance - itemList.item1Price;
         }
         else if (itemIndex == 2 && itemList.balance >= itemList.item2Price)
         {
-            itemList.item2Quantity++;
+            itemList.item2Quantity += 10;
             itemList.balance = itemList.balance - itemList.item2Price;
         }
         else if (itemIndex == 3 && itemList.balance >= itemList.item3Price)
         {
-            itemList.item3Quantity++;
+            itemList.item3Quantity += 10;
             itemList.balance = itemList.balance - itemList.item3Price;
         }
         else if (itemIndex == 4 && itemList.balance >= itemList.item4Price)
         {
-            itemList.item4Quantity++;
+            itemList.item4Quantity += 10;
             itemList.balance = itemList.balance - itemList.item4Price;
         }
         else if (itemIndex == 5 && itemList.balance >= itemList.item5Price)
         {
-            itemList.item5Quantity++;
+            itemList.item5Quantity += 10;
             itemList.balance = itemList.balance - itemList.item5Price;
         }
         else if (itemIndex == 6 && itemList.balance >= itemList.item6Price)
         {
-            itemList.item6Quantity++;
+            itemList.item6Quantity += 10;
             itemList.balance = itemList.balance - itemList.item6Price;
         }
         else if (itemIndex == 7 && itemList.balance >= itemList.item7Price)
         {
-            itemList.item7Quantity++;
+            itemList.item7Quantity += 10;
             itemList.balance = itemList.balance - itemList.item7Price;
         }
         else if (itemIndex == 8 && itemList.balance >= itemList.item8Price)
         {
-            itemList.item8Quantity++;
+            itemList.item8Quantity += 10;
             itemList.balance = itemList.balance - itemList.item8Price;
         }
         saveInventory();

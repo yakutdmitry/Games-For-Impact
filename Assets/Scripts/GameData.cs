@@ -13,5 +13,8 @@ public class GameData: ScriptableObject
 
     [Header("Feedback")] 
     [TextArea(3, 6)] 
-    public string[] feedback;
+    public string[] Sucessfulfeedback;
+    [TextArea(3, 6)] 
+    public string[] UnSucessfulfeedback;
+    
 }

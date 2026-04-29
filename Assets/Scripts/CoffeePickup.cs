@@ -8,8 +8,11 @@ using Random = UnityEngine.Random;
 
 public class CoffeePickup : MonoBehaviour
 {
+    public float customerWaitTime = 3f;
+    public int CustomerIncome;
     public GameObject InventoryScript;
     public GameObject nextTarget;
+    public AudioSource cashSound;
     [SerializeField] private ParticleSystem particle;
 
     private void OnTriggerEnter(Collider other)
@@ -28,7 +31,7 @@ public class CoffeePickup : MonoBehaviour
 
     public IEnumerator nextLocation(GameObject other)
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(customerWaitTime);
         if (other != null)
         {
             other.GetComponent<NavMeshAgent>().SetDestination(nextTarget.transform.position);
@@ -36,6 +39,7 @@ public class CoffeePickup : MonoBehaviour
             other.GetComponent<CoffeeCustomer>().CoffeeSpawn();
             Debug.Log(nextTarget.transform.position);
             particle.Play();
+            cashSound.Play();
             coffeeIncome();
         }
         
@@ -62,7 +66,7 @@ public class CoffeePickup : MonoBehaviour
         for (int i = 0; i < count; i++)
             items[i]();
         // add balance
-        InventoryScript.GetComponent<InventoryManager>().itemList.balance += 5;
+        InventoryScript.GetComponent<InventoryManager>().itemList.balance += CustomerIncome;
         //etc.
     }
 }
