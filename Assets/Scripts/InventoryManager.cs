@@ -79,6 +79,7 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI item8OwnedText;
 
     public TextMeshProUGUI BalanceText;
+    public TextMeshProUGUI ShopBalance;
 
     const string INVENTORY_FILE = "Inventory.json";
     string filePath;
@@ -106,6 +107,7 @@ public class InventoryManager : MonoBehaviour
     private void Update()
     {
         BalanceText.text = itemList.balance.ToString();
+        ShopBalance.text = itemList.balance.ToString();
 
         item1OwnedText.text = $"{itemList.item1Name}: ({itemList.item1Quantity / 1})";
         item2OwnedText.text = $"{itemList.item2Name}: ({itemList.item2Quantity})";

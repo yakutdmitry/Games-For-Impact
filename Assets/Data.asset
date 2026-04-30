@@ -47,7 +47,21 @@ MonoBehaviour:
     shop and thought it would look good if I could get it into tip-top shape\u2026
     but, uhm, let\u2019s just say I, uhh, forgot that I\u2019m not that handy with
     needle thread, y\u2019know? Anyways thankyousomuchand byeee!"
+  - "So, you\u2019re the one who has been fixing. Here, something for you bite on,
+    since you don\u2019t look that busy and I doubt anyone else would want, or know,
+    what to do with this."
   Sucessfulfeedback:
-  - Fixed
+  - "Hmm\u2026 the quality of the stitches is pretty good, and the choice of using
+    natural materials for the patches means that eventually it should all degrade
+    away naturally, leaving nothing behind to destroy the environment. Of course
+    this is only one part of the process, since as long as people throw away clothes
+    so casually, and companies and corporations get away with cheaping out on the
+    materials used, labour as well as keep encouraging people to be wasteful with
+    their clothing then your work can only do so much. Nevertheless, Excellent work."
   UnSucessfulfeedback:
-  - Holes Left
+  - "Hmm\u2026 The craftsmanship looks good, but the material\u2026 for your information,
+    clothes made and repaired with synthetic fabrics are exponentially more difficult,
+    or in some cases even impossible, to reuse let alone recycle. Synthetic and blended
+    textiles often contain PFAS and other chemicals that don\u2019t break down in
+    the environment, and can accumulate in the land and inside of living organisms.
+    Oh well, I do suppose failure is the forge of greatness, isn\u2019t it?"
