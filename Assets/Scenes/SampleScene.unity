@@ -4187,7 +4187,6 @@ GameObject:
   - component: {fileID: 336993770}
   - component: {fileID: 336993769}
   - component: {fileID: 336993768}
-  - component: {fileID: 336993772}
   - component: {fileID: 336993773}
   m_Layer: 0
   m_Name: WorkshopCam
@@ -4314,18 +4313,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50.128, y: -88.708, z: 0.306}
---- !u!114 &336993772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 336993767}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ba6a216e5882d4aa752601f6346c90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!114 &336993773
 MonoBehaviour:
   m_ObjectHideFlags: 0
