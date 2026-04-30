@@ -85,6 +85,9 @@ public class InventoryManager : MonoBehaviour
     public ItemProfile itemList;
 
     public GameObject customerSpawner;
+
+    public TextMeshProUGUI patchText;
+    public TextMeshProUGUI threadText;
     void Start()
     {
         filePath = Application.persistentDataPath;
@@ -132,6 +135,9 @@ public class InventoryManager : MonoBehaviour
             item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n <color=red>Owned: {itemList.item7Quantity}</color>";
             item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n <color=red>Owned: {itemList.item8Quantity}</color>";
         }
+
+        patchText.text = $"{itemList.item3Quantity}";
+        threadText.text = $"{itemList.item1Quantity}";
     }
     public void loadInventory()
     {
