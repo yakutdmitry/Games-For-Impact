@@ -8,15 +8,23 @@ public class FeedbackManager : MonoBehaviour
 {
     public GameData Data;
     public TextMeshProUGUI DisplayedText;
+    
+    
     [SerializeField] private GameObject InventoryManager;
     [SerializeField] private incomeManager incomeManager;
-
+    [SerializeField] private GameObject[] mascotPosees;
+    
     private bool needsRepair;
     
     public void GenerateFeedback()
     {
         if(GameObject.FindWithTag("Garment") != null)
-        { 
+        {
+            foreach (var pose in mascotPosees)
+            {
+                pose.SetActive(false);
+            }
+            
             needsRepair = GameObject.FindWithTag("Hole") != null || GameObject.FindWithTag("Corner") != null;
             Debug.Log("fEEDBACK FOUND " + GameObject.FindWithTag("Garment"));
             Debug.Log("needsRepair is " + needsRepair);
@@ -31,6 +39,8 @@ public class FeedbackManager : MonoBehaviour
             // DisplayedText.text = Data.feedback[Random.Range(0, Data.feedback.Length)];
             
             
+            // Display random mascot pose
+            mascotPosees[Random.Range(0, mascotPosees.Length -1)].SetActive(true); 
         }
         
         
