@@ -15,7 +15,15 @@ public class FeedbackManager : MonoBehaviour
     [SerializeField] private GameObject[] mascotPosees;
     
     private bool needsRepair;
-    
+
+    private void Awake()
+    {
+        foreach (var pose in mascotPosees)
+        {
+            pose.SetActive(false);
+        }
+    }
+
     public void GenerateFeedback()
     {
         if(GameObject.FindWithTag("Garment") != null)
@@ -40,7 +48,9 @@ public class FeedbackManager : MonoBehaviour
             
             
             // Display random mascot pose
-            mascotPosees[Random.Range(0, mascotPosees.Length -1)].SetActive(true); 
+            int randomIndex = Random.Range(0, mascotPosees.Length);
+            mascotPosees[randomIndex].SetActive(true); 
+            Debug.Log(randomIndex);
         }
         
         

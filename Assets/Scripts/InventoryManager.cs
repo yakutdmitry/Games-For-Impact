@@ -34,31 +34,40 @@ public struct ItemProfile
 }
 public class InventoryManager : MonoBehaviour
 {
-    public int startingBalance;
-    public string item1StartName;
-    public int item1StartQuantity;
-    public int item1StartPrice;
-    public string item2StartName;
-    public int item2StartQuantity;
-    public int item2StartPrice;
-    public string item3StartName;
-    public int item3StartQuantity;
-    public int item3StartPrice;
-    public string item4StartName;
-    public int item4StartQuantity;
-    public int item4StartPrice;
-    public string item5StartName;
-    public int item5StartQuantity;
-    public int item5StartPrice;
-    public string item6StartName;
-    public int item6StartQuantity;
-    public int item6StartPrice;
-    public string item7StartName;
-    public int item7StartQuantity;
-    public int item7StartPrice;
-    public string item8StartName;
-    public int item8StartQuantity;
-    public int item8StartPrice;
+    public int startingBalance = 20;
+
+    public string item1StartName = "Threads";
+    public int item1StartQuantity = 30;
+    public int item1StartPrice = 5;
+
+    public string item2StartName = "Needles";
+    public int item2StartQuantity = 20;
+    public int item2StartPrice = 8;
+
+    public string item3StartName = "Patches";
+    public int item3StartQuantity = 10;
+    public int item3StartPrice = 10;
+
+    public string item4StartName = "Coffee Beans";
+    public int item4StartQuantity = 5;
+    public int item4StartPrice = 10;
+
+    public string item5StartName = "Lids";
+    public int item5StartQuantity = 5;
+    public int item5StartPrice = 5;
+
+    public string item6StartName = "Cups";
+    public int item6StartQuantity = 5;
+    public int item6StartPrice = 10;
+
+    public string item7StartName = "Sugar";
+    public int item7StartQuantity = 5;
+    public int item7StartPrice = 5;
+
+    public string item8StartName = "Stirring Rods";
+    public int item8StartQuantity = 5;
+    public int item8StartPrice = 5;
+
 
     public TextMeshProUGUI item1ShopText;
     public TextMeshProUGUI item2ShopText;
