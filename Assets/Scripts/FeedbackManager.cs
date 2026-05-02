@@ -2,13 +2,14 @@ using System;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using Button = UnityEngine.UI.Button;
 using Random = UnityEngine.Random;
 
 public class FeedbackManager : MonoBehaviour
 {
     public GameData Data;
     public TextMeshProUGUI DisplayedText;
-    
+    public Button finishRepairButton;
     
     [SerializeField] private GameObject InventoryManager;
     [SerializeField] private incomeManager incomeManager;
@@ -49,7 +50,8 @@ public class FeedbackManager : MonoBehaviour
             
             // Display random mascot pose
             int randomIndex = Random.Range(0, mascotPosees.Length);
-            mascotPosees[randomIndex].SetActive(true); 
+            mascotPosees[randomIndex].SetActive(true);
+            finishRepairButton.interactable = false;
             Debug.Log(randomIndex);
         }
         

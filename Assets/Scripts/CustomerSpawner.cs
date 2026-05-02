@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class CustomerSpawner : MonoBehaviour
@@ -18,6 +19,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject notEnoughMaterials;
     public GameObject redDot;
     public GameObject redCafeDot;
+    public Button finishRepairButton;
     private bool onCafe = true;
     public bool redText = false;
 
@@ -65,6 +67,8 @@ public class CustomerSpawner : MonoBehaviour
             Instantiate(RepairCustomers[Random.Range(0, RepairCustomers.Length - 1)], gameObject.transform.position, transform.rotation);
             incomeManager.finished = false;
             repairSpawnRate = repairSpawn;
+
+            finishRepairButton.interactable = true;
         }
         else
         {
