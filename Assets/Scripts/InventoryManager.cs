@@ -97,7 +97,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject customerSpawner;
 
     public TextMeshProUGUI patchText;
-    public TextMeshProUGUI threadText;
+    public TextMeshProUGUI neadlesQuantity;
     void Start()
     {
         filePath = Application.persistentDataPath;
@@ -148,7 +148,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         patchText.text = $"{itemList.item3Quantity}";
-        threadText.text = $"{itemList.item1Quantity}";
+        neadlesQuantity.text = $"{itemList.item2Quantity}";
     }
     public void loadInventory()
     {

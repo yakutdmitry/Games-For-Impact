@@ -8,6 +8,8 @@ public class CustomerSpawner : MonoBehaviour
     [SerializeField] private GameObject[] CoffeeCustomers;
     [SerializeField] private GameObject[] RepairCustomers;
     [SerializeField] private float SpawnRate = 10;
+    [SerializeField] private float repairSpawnRate = 10;
+    public float repairSpawn;
     private float timer = 0;
     public bool repairCustomerIsSpawned;
     [SerializeField] private incomeManager incomeManager;
@@ -24,10 +26,13 @@ public class CustomerSpawner : MonoBehaviour
         notEnoughMaterials.SetActive(true);
         redDot.SetActive(true);
         redCafeDot.SetActive(true);
+
+        repairSpawnRate = repairSpawn;
     }
     private void Update()
     {
         timer -= Time.deltaTime;
+        repairSpawnRate -= Time.deltaTime;
 
         if (timer <= 0)
         {
@@ -55,10 +60,11 @@ public class CustomerSpawner : MonoBehaviour
     private void Spawn()
     {
         timer = SpawnRate;
-        if (incomeManager.finished)
+        if (incomeManager.finished && repairSpawnRate <= 0)
         {
             Instantiate(RepairCustomers[Random.Range(0, RepairCustomers.Length - 1)], gameObject.transform.position, transform.rotation);
             incomeManager.finished = false;
+            repairSpawnRate = repairSpawn;
         }
         else
         {

@@ -13553,6 +13553,8 @@ MonoBehaviour:
   - {fileID: 1689769263049516096, guid: 7aa2b812eefc5f54896a39c95fa444ca, type: 3}
   - {fileID: 232064316772849679, guid: 71e141400b7833d499d9e2f5aec85162, type: 3}
   SpawnRate: 2.5
+  repairSpawnRate: 6
+  repairSpawn: 10
   repairCustomerIsSpawned: 0
   incomeManager: {fileID: 242792710}
   InventoryManager: {fileID: 1892397788}
@@ -14970,7 +14972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.7673437}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.005126953, y: -32.08438}
+  m_AnchoredPosition: {x: -0.0053710938, y: -32.08435}
   m_SizeDelta: {x: -1332.3615, y: -64.14863}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280515128
@@ -22055,7 +22057,7 @@ MonoBehaviour:
     item8Price: 0
   customerSpawner: {fileID: 1187773316}
   patchText: {fileID: 11935987}
-  threadText: {fileID: 1617671768}
+  neadlesQuantity: {fileID: 0}
 --- !u!1 &1896858212
 GameObject:
   m_ObjectHideFlags: 0
