@@ -13,7 +13,8 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     private GameObject camera;
     private bool canDrag;
     public GameObject Corner;
-
+    private AudioSource sewingSFX;
+    private int soundscount;
     public InventoryManager Inventory;
     // [SerializeField] private PlayerController controller;
     [SerializeField] private Garment garment;
@@ -22,7 +23,7 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         camera = GameObject.Find("WorkshopCam");
         Inventory = GameObject.Find("InventoryManager").GetComponent<InventoryManager>();
-
+        sewingSFX = GameObject.Find("sewing-machine_sfx").GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -71,6 +72,14 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                     garment = GameObject.FindWithTag("Garment").GetComponent<Garment>(); 
                     Instantiate(garment.Patches[Random.Range(0, garment.Patches.Length)], hit.transform.position, 
                         hit.transform.rotation, garment.transform);
+                    soundscount++;
+                    if (soundscount == 2)
+                    {
+                        soundscount = 0;
+                        sewingSFX.Play();
+                    }
+                    
+                    
                     canDrag = false; 
                     hit.transform.gameObject.SetActive(false);
                 }
