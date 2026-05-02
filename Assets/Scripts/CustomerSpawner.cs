@@ -34,7 +34,10 @@ public class CustomerSpawner : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
-        repairSpawnRate -= Time.deltaTime;
+        if (incomeManager.finished)
+        {
+            repairSpawnRate -= Time.deltaTime;
+        }
 
         if (timer <= 0)
         {
