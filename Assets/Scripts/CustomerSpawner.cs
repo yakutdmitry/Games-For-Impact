@@ -30,6 +30,7 @@ public class CustomerSpawner : MonoBehaviour
         redCafeDot.SetActive(true);
 
         repairSpawnRate = repairSpawn;
+        InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
     }
     private void Update()
     {
@@ -49,6 +50,8 @@ public class CustomerSpawner : MonoBehaviour
             redDot.SetActive(false);
             redText = false;
             redCafeDot.SetActive(false);
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+
         }
         else
         {
@@ -56,14 +59,19 @@ public class CustomerSpawner : MonoBehaviour
             {
                 notEnoughMaterials.SetActive(true);
                 redDot.SetActive(true);
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+                
             }
             redText = true;
             redCafeDot.SetActive(true);
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+            
         }
     }
 
     private void Spawn()
     {
+        InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
         timer = SpawnRate;
         if (incomeManager.finished && repairSpawnRate <= 0)
         {

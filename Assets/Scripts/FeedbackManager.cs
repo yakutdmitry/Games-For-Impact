@@ -19,6 +19,8 @@ public class FeedbackManager : MonoBehaviour
 
     private void Awake()
     {
+        InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+        
         foreach (var pose in mascotPosees)
         {
             pose.SetActive(false);
@@ -53,6 +55,8 @@ public class FeedbackManager : MonoBehaviour
             mascotPosees[randomIndex].SetActive(true);
             finishRepairButton.interactable = false;
             Debug.Log(randomIndex);
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+            
         }
         
         
@@ -60,12 +64,16 @@ public class FeedbackManager : MonoBehaviour
         {
             DisplayedText.text = Data.UnSucessfulfeedback[Random.Range(0, Data.Sucessfulfeedback.Length)];
             InventoryManager.GetComponent<InventoryManager>().itemList.balance += Random.Range(20, 35);
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+            
         }
         
         if (!needsRepair)
         {
             DisplayedText.text = Data.Sucessfulfeedback[Random.Range(0, Data.UnSucessfulfeedback.Length)];
             InventoryManager.GetComponent<InventoryManager>().itemList.balance += 10;
+            InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
+            
         }
     }
 }

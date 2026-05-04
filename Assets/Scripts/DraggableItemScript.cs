@@ -111,17 +111,23 @@ public class DraggableItemScript : MonoBehaviour, IBeginDragHandler, IDragHandle
                 //Decrease number of threads and needles
                 Inventory.itemList.item1Quantity--;
                 Inventory.itemList.item2Quantity--;
+                Inventory.UpdateBalance();
+                
             }
             else
             {
                 //Add UI feedback
                 Debug.Log("Not enough materials");
+                Inventory.UpdateBalance();
+                
             }
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        Inventory.UpdateBalance();
+        
         // controller.dragging = false;
         transform.position = startTransform;
         canDrag = true;

@@ -67,6 +67,8 @@ public class CoffeePickup : MonoBehaviour
             items[i]();
         // add balance
         InventoryScript.GetComponent<InventoryManager>().itemList.balance += CustomerIncome;
+        InventoryScript.GetComponent<InventoryManager>().UpdateBalance();
+        
         //etc.
     }
 }
