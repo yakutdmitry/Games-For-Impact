@@ -19,6 +19,7 @@ public class CustomerSpawner : MonoBehaviour
     public GameObject notEnoughMaterials;
     public GameObject redDot;
     public GameObject redCafeDot;
+    public GameObject redRepairDot;
     public Button finishRepairButton;
     private bool onCafe = true;
     public bool redText = false;
@@ -28,6 +29,7 @@ public class CustomerSpawner : MonoBehaviour
         notEnoughMaterials.SetActive(true);
         redDot.SetActive(true);
         redCafeDot.SetActive(true);
+        redRepairDot.SetActive(true);
 
         repairSpawnRate = repairSpawn;
         InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
@@ -44,12 +46,13 @@ public class CustomerSpawner : MonoBehaviour
         {
             Spawn();
         }
-        if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
+        if (InventoryManager.GetComponent<InventoryManager>().itemList.item1Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item2Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item3Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity > 0 && InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity > 0)
         {
             notEnoughMaterials.SetActive(false);
             redDot.SetActive(false);
             redText = false;
             redCafeDot.SetActive(false);
+            redRepairDot.SetActive(false);
             InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
 
         }
@@ -63,7 +66,22 @@ public class CustomerSpawner : MonoBehaviour
                 
             }
             redText = true;
-            redCafeDot.SetActive(true);
+            if (InventoryManager.GetComponent<InventoryManager>().itemList.item4Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item5Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item6Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item7Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item8Quantity <= 0)
+            {
+                redCafeDot.SetActive(true);
+            }
+            else
+            {
+                redCafeDot.SetActive(false);
+            }
+            if (InventoryManager.GetComponent<InventoryManager>().itemList.item1Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item2Quantity <= 0 || InventoryManager.GetComponent<InventoryManager>().itemList.item3Quantity <= 0)
+            {
+                redRepairDot.SetActive(true);
+            }
+            else
+            {
+                redRepairDot.SetActive(false);
+            }
             InventoryManager.GetComponent<InventoryManager>().UpdateBalance();
             
         }
