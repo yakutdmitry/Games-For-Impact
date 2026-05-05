@@ -128,24 +128,69 @@ public class InventoryManager : MonoBehaviour
         item7OwnedText.text = $"{itemList.item7Name}: ({itemList.item7Quantity})";
         item8OwnedText.text = $"{itemList.item8Name}: ({itemList.item8Quantity})";
 
-        item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity / 1}";
-        item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
-        item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
-        if (customerSpawner.GetComponent<CustomerSpawner>().redText == false)
+        if (itemList.item1Quantity <= 0)
         {
-            item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
-            item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
-            item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
-            item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
-            item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
+            item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n <color=red>Owned: {itemList.item1Quantity / 1}</color>";
         }
         else
         {
+            item1ShopText.text = $"{itemList.item1Name} €{itemList.item1Price}\n Owned: {itemList.item1Quantity / 1}";
+        }
+        if (itemList.item2Quantity <= 0)
+        {
+            item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n <color=red>Owned: {itemList.item2Quantity}</color>";
+        }
+        else
+        {
+            item2ShopText.text = $"{itemList.item2Name} €{itemList.item2Price}\n Owned: {itemList.item2Quantity}";
+        }
+        if (itemList.item3Quantity <= 0)
+        {
+            item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n <color=red>Owned: {itemList.item3Quantity}</color>";
+        }
+        else
+        {
+            item3ShopText.text = $"{itemList.item3Name} €{itemList.item3Price}\n Owned: {itemList.item3Quantity}";
+        }
+        if (itemList.item4Quantity <= 0)
+        {
             item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n <color=red>Owned: {itemList.item4Quantity}</color>";
+        }
+        else
+        {
+            item4ShopText.text = $"{itemList.item4Name} €{itemList.item4Price}\n Owned: {itemList.item4Quantity}";
+        }
+        if (itemList.item5Quantity <= 0)
+        {
             item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n <color=red>Owned: {itemList.item5Quantity}</color>";
+        }
+        else
+        {
+            item5ShopText.text = $"{itemList.item5Name} €{itemList.item5Price}\n Owned: {itemList.item5Quantity}";
+        }
+        if (itemList.item6Quantity <= 0)
+        {
             item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n <color=red>Owned: {itemList.item6Quantity}</color>";
+        }
+        else
+        {
+            item6ShopText.text = $"{itemList.item6Name} €{itemList.item6Price}\n Owned: {itemList.item6Quantity}";
+        }
+        if (itemList.item7Quantity <= 0)
+        {
             item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n <color=red>Owned: {itemList.item7Quantity}</color>";
+        }
+        else
+        {
+            item7ShopText.text = $"{itemList.item7Name} €{itemList.item7Price}\n Owned: {itemList.item7Quantity}";
+        }
+        if (itemList.item8Quantity <= 0)
+        {
             item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n <color=red>Owned: {itemList.item8Quantity}</color>";
+        }
+        else
+        {
+            item8ShopText.text = $"{itemList.item8Name} €{itemList.item8Price}\n Owned: {itemList.item8Quantity}";
         }
 
         patchText.text = $"{itemList.item3Quantity}";
