@@ -98,7 +98,7 @@ public class InventoryManager : MonoBehaviour
 
     public TextMeshProUGUI patchText;
     public TextMeshProUGUI neadlesQuantity;
-    void Start()
+    void Awake()
     {
         filePath = Application.persistentDataPath;
         itemList = new ItemProfile();
@@ -198,6 +198,32 @@ public class InventoryManager : MonoBehaviour
     }
     public void loadInventory()
     {
+        itemList.balance = startingBalance;
+        itemList.item1Name = item1StartName;
+        itemList.item1Quantity = item1StartQuantity;
+        itemList.item1Price = item1StartPrice;
+        itemList.item2Name = item2StartName;
+        itemList.item2Quantity = item1StartQuantity;
+        itemList.item2Price = item2StartPrice;
+        itemList.item3Name = item3StartName;
+        itemList.item3Quantity = item3StartQuantity;
+        itemList.item3Price = item3StartPrice;
+        itemList.item4Name = item4StartName;
+        itemList.item4Quantity = item4StartQuantity;
+        itemList.item4Price = item4StartPrice;
+        itemList.item5Name = item5StartName;
+        itemList.item5Quantity = item5StartQuantity;
+        itemList.item5Price = item5StartPrice;
+        itemList.item6Name = item6StartName;
+        itemList.item6Quantity = item6StartQuantity;
+        itemList.item6Price = item6StartPrice;
+        itemList.item7Name = item7StartName;
+        itemList.item7Quantity = item7StartQuantity;
+        itemList.item7Price = item7StartPrice;
+        itemList.item8Name = item8StartName;
+        itemList.item8Quantity = item8StartQuantity;
+        itemList.item8Price = item8StartPrice;
+        
         if(File.Exists (filePath + "/" + INVENTORY_FILE)) { 
 
             //Code from here to the next note makes inventory status save between each run

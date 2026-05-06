@@ -58,6 +58,9 @@ MonoBehaviour:
     so casually, and companies and corporations get away with cheaping out on the
     materials used, labour as well as keep encouraging people to be wasteful with
     their clothing then your work can only do so much. Nevertheless, Excellent work."
+  - "Hmm\u2026 the quality of your work, it\u2019s pretty good. Of course I don\u2019t
+    expect many others will put that much appreciation for our work, at least in
+    my lifetime. Nevertheless, keep it up"
   UnSucessfulfeedback:
   - "Hmm\u2026 The craftsmanship looks good, but the material\u2026 for your information,
     clothes made and repaired with synthetic fabrics are exponentially more difficult,
@@ -65,3 +68,7 @@ MonoBehaviour:
     textiles often contain PFAS and other chemicals that don\u2019t break down in
     the environment, and can accumulate in the land and inside of living organisms.
     Oh well, I do suppose failure is the forge of greatness, isn\u2019t it?"
+  - "Hmm\u2026 your choice in materials concerns me. Let me tell you about synthetic
+    and blended textiles. They often contain per- and poly-fluor alkylated substances,
+    commonly shortened as PFAS: a vast collection of synthetic \u2018forever chemicals\u2019,
+    which break down slowly and accumulate in the environment, water, and our bodies."

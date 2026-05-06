@@ -22699,15 +22699,15 @@ MonoBehaviour:
   BalanceText: {fileID: 1461134591}
   ShopBalance: {fileID: 1372271137}
   itemList:
-    balance: 0
+    balance: 20
     item1Name: 
-    item1Quantity: 0
+    item1Quantity: 30
     item1Price: 0
     item2Name: 
-    item2Quantity: 0
+    item2Quantity: 20
     item2Price: 0
     item3Name: 
-    item3Quantity: 0
+    item3Quantity: 10
     item3Price: 0
     item4Name: 
     item4Quantity: 0
